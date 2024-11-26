@@ -10,7 +10,7 @@ const Teacher = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://crud-operation-1-y606.onrender.com/api/teachers");
+        const response = await axios.get("https://crud-operation-25kc.onrender.com/api/teachers");
         setTeachers(response.data);
       } catch (error) {
         console.log("Error while fetching data", error);
@@ -21,7 +21,7 @@ const Teacher = () => {
 
   const deleteTeacher = async (teacherId) => {
     await axios
-      .delete(`https://crud-operation-1-y606.onrender.com/api/delete/teacher/${teacherId}`)
+      .delete(`https://crud-operation-25kc.onrender.com/api/delete/teacher/${teacherId}`)
       .then((response) => {
         setTeachers((prevTeachers) =>
           prevTeachers.filter((teacher) => teacher._id !== teacherId)
