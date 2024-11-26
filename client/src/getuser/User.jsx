@@ -9,7 +9,7 @@ const User = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://crud-operation-1-y606.onrender.com/api/users");
+        const response = await axios.get("https://crud-operation-25kc.onrender.com/api/users");
         setUsers(response.data);
       } catch (error) {
         console.log("Error while fetching data", error);
@@ -20,7 +20,7 @@ const User = () => {
 
   const deleteUser = async (userId) => {
     await axios
-      .delete(`https://crud-operation-1-y606.onrender.com/api/delete/user/${userId}`)
+      .delete(`https://crud-operation-25kc.onrender.com/api/delete/user/${userId}`)
       .then((response) => {
         setUsers((prevUser) => prevUser.filter((user) => user._id !== userId));
         toast.success(response.data.message, { position: "top-right" });
